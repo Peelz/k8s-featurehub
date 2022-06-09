@@ -22,7 +22,7 @@ spec:
             - name: POSTGRES_DB
               value: db0
             - name: POSTGRES_USER
-              value: pg_user
+              value: postgres
             - name: POSTGRES_PASSWORD
               value: changeme
           volumeMounts:
@@ -31,4 +31,4 @@ spec:
       volumes:
         - name: postgredb
           persistentVolumeClaim:
-            claimName: postgres-pv-claim
+            claimName: postgres-data-claim

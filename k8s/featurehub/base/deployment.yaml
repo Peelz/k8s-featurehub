@@ -20,7 +20,7 @@ spec:
             - containerPort: 8085
           env:
             - name: db.url
-              value: postgres://db:5432/db0
+              value: jdbc:postgresql://postgres:5432/db0
             - name: db.username
               value: postgres
             - name: db.password

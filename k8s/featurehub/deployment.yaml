@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: featurehub
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: featurehub
+  template:
+    metadata:
+      labels:
+        app: featurehub
+    spec:
+      containers:
+        - image: featurehub/party-server:latest
+          name: party-server
+          ports:
+            - containerPort: 8085
